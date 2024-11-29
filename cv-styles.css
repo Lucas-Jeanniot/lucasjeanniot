@@ -1,3 +1,23 @@
+body {
+    background: #000066;
+    font-family: "Times New Roman", serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    height: calc(100vh - 40px);
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #000033;
+    border: 2px solid #ffffff;
+}
+
 .content.cv-container {
     display: flex;
     flex-direction: column;

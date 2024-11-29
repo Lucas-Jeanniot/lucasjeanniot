@@ -11,8 +11,8 @@ body {
 .main-container {
     display: grid;
     grid-template-columns: 200px 1fr;
-    height: calc(100vh - 40px);
-    max-width: 1200px;
+    height: calc(100vh - 100px);
+    max-width: 1000px;
     margin: 0 auto;
     background: #000033;
     border: 2px solid #ffffff;
@@ -87,8 +87,8 @@ body {
 }
 
 .interest-box img {
-    width: 100px;
-    height: 100px;
+    width: 150x;
+    height: 150px;
     margin-top: 10px;
 }
 
@@ -125,9 +125,9 @@ h2 {
 
 .side-banner {
     position: fixed;
-    left: calc(50% - 750px);
+    left: calc(50% - 660px);
     top: 20px;
-    height: calc(100vh - 40px);
+    height: calc(100vh - 95px);
     width: 150px;
 }
 
@@ -159,3 +159,19 @@ h2 {
     height: 105px;
     object-fit: cover;
 }
+
+.shoutbox-container {
+    position: fixed;
+    right: calc(50% - 720px);
+    top: 80px;
+    width: 200px;
+    height: calc(100vh - 20px);
+}
+
+.shoutbox iframe {
+    width: 130%;
+    height: 50%;
+    border: none;
+    position: absolute;
+}
+

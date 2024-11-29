@@ -23,7 +23,25 @@
                 <img src="assets/blockbuster.gif" alt="blockbuster">
             </div>
         </div>
-        <div class="visitor-counter">[VISITORS]: 000012</div>
+        <div class="visitor-counter" id="stats">
+            <script>
+                var t = setInterval(function() {
+                    if (window.goatcounter && window.goatcounter.visit_count) {
+                        clearInterval(t)
+                        window.goatcounter.visit_count({
+                            append: '#stats',
+                            style: `
+                                div { border-top: 1px solid #ffffff; padding-top: 10px; color: #00ff00; text-align: center; }
+                                #gcvc-views { color: #00ff00; }
+                                #gcvc-for { display: none; }
+                                #gcvc-by { display: none; }
+                            `
+                        })
+                    }
+                }, 100)
+            </script>
+            <script data-goatcounter="https://thressian.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+        </div>
     </div>
 
     <div class="content">
@@ -42,7 +60,7 @@
             never organically discovering content on the internet ever again. I love
             developing single use throwaway tools for tasks that I will never look
             at again. I think the quality drop of Cracked.com should be used as a
-            study case in how nothing good on the internet can remain pure for long.</p>
+            study case in how nothing good on the internet can remain pure forever.</p>
 
         <div>
             <h2>>_ CurrentRole.txt</h2>
@@ -73,6 +91,13 @@
             <p>Best viewed with eyes</p>
             <p>Last updated: 11/29/2024 - Best viewed at 800x600 in CyberSpace</p>
         </div>
+    </div>
+</div>
+</div>
+<div class="shoutbox-container">
+    <div class="shoutbox">
+        <h2 class="shoutbox-title">hatemail</h2>
+        <iframe src="https://hatemail.ishoutbox.com" frameborder="0"></iframe>
     </div>
 </div>
 <script>
