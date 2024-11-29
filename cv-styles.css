@@ -1,0 +1,151 @@
+.content.cv-container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 80px);
+}
+
+.cv-section {
+    border: 1px solid #ffffff;
+    margin: 20px 0;
+    padding: 20px;
+    background: #000044;
+}
+
+.cv-sections-scroll {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 15px;
+    scrollbar-width: thin;
+    scrollbar-color: #ffff00 #000044;
+}
+
+.cv-sections-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.cv-sections-scroll::-webkit-scrollbar-track {
+    background: #000044;
+}
+
+.cv-sections-scroll::-webkit-scrollbar-thumb {
+    background-color: #ffff00;
+    border-radius: 4px;
+}
+
+.experience-item {
+    border-left: 2px solid #ffff00;
+    margin: 15px 0;
+    padding: 15px;
+}
+
+.experience-item h3 {
+    color: #ffff00;
+    margin-bottom: 5px;
+}
+
+.experience-item p {
+    color: #cccccc;
+    margin-bottom: 10px;
+}
+
+.experience-item ul {
+    list-style-type: none;
+    padding-left: 15px;
+}
+
+.experience-item ul li:before {
+    content: ">>";
+    color: #ffff00;
+    margin-right: 8px;
+}
+
+.talks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.talk-item {
+    padding: 10px;
+    background: #000066;
+    border: 1px solid #ffffff;
+    color: #ffff00;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.cert-box {
+    padding: 15px;
+    background: #000066;
+    border: 1px solid #ffffff;
+    color: #ffff00;
+    text-align: center;
+}
+
+.education-item {
+    text-align: center;
+    border: 1px solid #ffffff;
+    padding: 15px;
+    margin: 15px 0;
+    background: #000066;
+}
+
+.education-item h3 {
+    color: #ffff00;
+    margin-bottom: 5px;
+}
+
+.education-item p {
+    color: #cccccc;
+}
+
+.grade {
+    color: #ffff00 !important;
+    font-style: italic;
+}
+
+.banner, .footer {
+    flex-shrink: 0;
+}
+
+.banner {
+    text-align: center;
+    color: #ffff00;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 10px;
+}
+
+.footer {
+    margin-top: 20px;
+    color: #ffff00;
+}
+
+.summary-section {
+    margin-bottom: 30px;
+}
+
+.summary-content {
+    background: #000066;
+    padding: 20px;
+    border: 1px solid #ffffff;
+}
+
+.core-competencies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.competency-item {
+    background: #000044;
+    border: 1px solid #ffff00;
+    padding: 10px;
+    text-align: center;
+    color: #ffff00;
+}

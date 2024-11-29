@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="side-banner">
+    <img src="assets/banner-left.gif" alt="banner">
+</div>
+<div class="main-container">
+    <div class="sidebar">
+        <div class="nav-content">
+            <h2>Navigation</h2>
+            <a href="index.html" class="sidebar-link">Home</a>
+            <a href="cv.html" class="sidebar-link">CV</a>
+            <a href="talks.html" class="sidebar-link">Conference Talks</a>
+            <a href="https://www.linkedin.com/in/lucas-jeanniot/" class="sidebar-link" target="_blank">LinkedIn</a>
+            <a href="mailto:luc.jeanniot@gmail.com" class="sidebar-link">Email</a>
+            <div class="nav-badges">
+                <img src="assets/internet.gif" alt="internet">
+                <img src="assets/vhs.gif" alt="vhs">
+                <img src="assets/dhl.gif" alt="dhl">
+                <img src="assets/blockbuster.gif" alt="blockbuster">
+            </div>
+        </div>
+        <div class="visitor-counter">[VISITORS]: 000012</div>
+    </div>
+
+    <div class="content">
+        <div class="profile-header">
+            <img src="assets/happy.gif" alt="Profile Picture">
+            <h1>-Lucas Jeanniot-</h1>
+            <img src="assets/spin.gif" alt="Matrix Rain">
+        </div>
+
+        <marquee class="marquee" scrolldelay="100">-=[[ Search Engine Optimisation Killed The Internet Browsing Experience in 1997 ]]=-</marquee>
+
+        <p><strong>ABOUT ME</strong><br>
+            Software Engineer and Automation Fantatic. I love video games and I miss
+            the website StumbleUpon. I regret my use of StumbleUpon as a child
+            because it led to the discovery of Reddit and consequently led to me
+            never organically discovering content on the internet ever again. I love
+            developing single use throwaway tools for tasks that I will never look
+            at again. I think the quality drop of Cracked.com should be used as a
+            study case in how nothing good on the internet can remain pure for long.</p>
+
+        <div>
+            <h2>>_ CurrentRole.txt</h2>
+            <p>Machine Learning Engineer developing Search and Retrieval pipelines to make the machines think gooder. 
+            <br>Specialised in Python and data processing automation software such as Apache Nifi and UIPath. 
+            <br>Also pretty good good with GenAI Stuff. </p>
+        </div>
+
+        <h2>>_ Interests.exe</h2>
+        <div class="interests">
+            <div class="interest-box">
+                Software Development
+                <img src="assets/coding.gif" alt="Code">
+            </div>
+            <div class="interest-box">
+                Gaming
+                <img src="assets/gaming.gif" alt="Games">
+            </div>
+            <div class="interest-box">
+                Developer Advocacy
+                <img src="assets/conferences.gif" alt="Conferencing">
+            </div>
+        </div>
+
+        <marquee class="marquee" scrolldelay="2"><img src="assets/flame.gif" width="30" height="30" alt="fire"> WRITING TEST CASES BETRAYS A LACK OF CONFIDENCE IN YOUR CODE <img src="assets/flame.gif" width="30" height="30" alt="Matrix Rain"></marquee>
+
+        <div class="footer">
+            <p>Best viewed with eyes</p>
+            <p>Last updated: 11/29/2024 - Best viewed at 800x600 in CyberSpace</p>
+        </div>
+    </div>
+</div>
+<script>
+    class Sparkle {
+        constructor(x, y) {
+            this.x = x;
+            this.y = y;
+            this.size = Math.random() * 3 + 1;
+            this.speedY = Math.random() * 1 - 0.5;
+            this.speedX = Math.random() * 1 - 0.5;
+            this.life = 30;
+            this.colors = ['#ffff00', '#ffffff', '#00ff00'];
+            this.color = this.colors[Math.floor(Math.random() * this.colors.length)];
+        }
+    }
+    
+    let sparkles = [];
+    
+    function createSparkleTrail(e) {
+        const rect = canvas.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        for (let i = 0; i < 3; i++) {
+            sparkles.push(new Sparkle(x, y));
+        }
+    }
+    
+    function drawSparkles() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        for (let i = sparkles.length - 1; i >= 0; i--) {
+            const s = sparkles[i];
+            ctx.beginPath();
+            ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
+            ctx.fillStyle = s.color;
+            ctx.fill();
+            
+            s.x += s.speedX;
+            s.y += s.speedY;
+            s.life--;
+            s.size *= 0.95;
+            
+            if (s.life <= 0) {
+                sparkles.splice(i, 1);
+            }
+        }
+        requestAnimationFrame(drawSparkles);
+    }
+    
+    const canvas = document.createElement('canvas');
+    canvas.style.position = 'fixed';
+    canvas.style.top = '0';
+    canvas.style.left = '0';
+    canvas.style.pointerEvents = 'none';
+    canvas.style.zIndex = '9999';
+    document.body.appendChild(canvas);
+    
+    const ctx = canvas.getContext('2d');
+    
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    
+    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener('mousemove', createSparkleTrail);
+    resizeCanvas();
+    drawSparkles();
+    </script>
+</body>
+</html>
