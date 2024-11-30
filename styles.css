@@ -11,7 +11,7 @@ body {
 .main-container {
     display: grid;
     grid-template-columns: 200px 1fr;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 105px);
     max-width: 1000px;
     margin: 0 auto;
     background: #000033;
@@ -20,7 +20,7 @@ body {
 }
 
 .sidebar {
-    padding: 20px;
+    padding: 12px;
     border-right: 1px solid #ffffff;
     display: flex;
     flex-direction: column;
@@ -61,7 +61,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 50px;
     margin-bottom: 20px;
     border-bottom: 1px solid #ffffff;
     padding-bottom: 20px;
@@ -69,6 +69,11 @@ body {
 
 .profile-header img {
     width: 100px;
+    height: 100px;
+}
+
+.profile-header img.header-name {
+    width: 400px;
     height: 100px;
 }
 
@@ -104,13 +109,6 @@ h2 {
     color: #ff002f;
 }
 
-.visitor-counter {
-    text-align: center;
-    border-top: 1px solid #ffffff;
-    padding-top: 10px;
-    color: #00ff00;
-}
-
 .footer {
     text-align: center;
     font-size: 0.8em;
@@ -125,10 +123,11 @@ h2 {
 
 .side-banner {
     position: fixed;
-    left: calc(50% - 660px);
+    left: calc(50% - 805px);
     top: 20px;
-    height: calc(100vh - 95px);
+    height: calc(100vh - 101px);
     width: 150px;
+    display: flex;
 }
 
 .side-banner img {
@@ -156,8 +155,9 @@ h2 {
 
 .nav-badges img {
     width: 170px;
-    height: 105px;
-    object-fit: cover;
+    height: 85px;
+    padding: auto;
+    object-fit: fill;
 }
 
 .shoutbox-container {
@@ -175,3 +175,65 @@ h2 {
     position: absolute;
 }
 
+.stats-container {
+    position: fixed;
+    right: calc(50% - 745px);
+    top: calc(50vh + 130px);
+    width: 200px;
+    background: #c505a9;
+    border: 2px solid #ffffff;
+    height: 80px;
+    padding: 10px;
+}
+
+.stats-container div {
+    width: 100%;
+    text-align: center;
+    color: #ffff00;
+}
+
+.footer-images {
+    display: flex;
+    justify-content:center;
+    width: 1000px;
+    margin: 1px 0 5px calc(50% - 500px);
+ }
+
+ .footer-image-left {
+    width: 50%;
+    height: 70px;
+    object-fit:fill;
+ }
+ .footer-image-center, 
+.footer-image-right {
+   width: 25%;
+   height: 75px;
+   object-fit: fill;
+}
+.footer-image-center{
+    height: 70px;
+}
+
+
+.footer-image-netscape {
+    position: fixed;
+    right: 50px;
+    bottom: 40px;
+    width: 250px;
+    height: 100px;
+    border: none;
+    object-fit: fill;
+ }
+
+ .audio-control {
+    margin-top: 10px;
+    text-align: center;
+    border-top: 1px solid #ffffff;
+    padding-top: 10px;
+}
+
+.audio-control label {
+    display: block;
+    color: #ffff00;
+    margin-bottom: 5px;
+}
