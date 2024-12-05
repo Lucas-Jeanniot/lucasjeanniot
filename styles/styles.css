@@ -150,7 +150,6 @@ h2 {
     border-top: 1px solid #ffffff;
     padding-top: 1px;
     flex: 1;
-    justify-content: space-evenly;
 }
 
 .nav-badges img {
@@ -226,14 +225,14 @@ h2 {
  }
 
  .audio-control {
-    margin-top: 10px;
+    margin-top: 5px;
     text-align: center;
     border-top: 1px solid #ffffff;
-    padding-top: 10px;
+    padding-top: 4px;
 }
 
 .audio-control label {
     display: block;
     color: #ffff00;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
