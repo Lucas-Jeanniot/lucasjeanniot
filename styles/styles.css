@@ -1,6 +1,11 @@
 
 /* Important Content */
 
+.mobile-shoutbox-modal,
+.mobile-hatemail-btn {
+    display: none;
+}
+
 html, body {
     min-height: 100vh;
     background: url('../assets/background.gif');
@@ -59,7 +64,7 @@ body {
 .main-container {
     position: relative;
     width: 1000px;
-    max-height: calc(100vh - 85px);
+    min-height: calc(100vh - 150px);
     margin: 0 auto;
     background: rgba(0, 0, 51, 0.85);
     border: 2px solid #ffffff;
@@ -318,6 +323,7 @@ h2 {
     .nav-badges,
     .footer-images,
     .shoutbox-container
+    .shoutbox
     .footer-image-netscape {
         display: none;
     }
@@ -326,6 +332,11 @@ h2 {
         width: 95%;
         grid-template-columns: 1fr;
         grid-template-rows: auto 1fr;
+        height: auto;
+        min-height: 0;
+    }
+
+    .content {
         height: auto;
         min-height: 0;
     }
@@ -387,7 +398,7 @@ h2 {
         border: none;
     }
     .mobile-shoutbox-content .shoutbox {
-        height: calc(100% - 40px); /* Account for close button space */
+        height: calc(100% - 40px);
         margin-top: 40px;
     }
 
@@ -418,13 +429,22 @@ h2 {
     }
 
     .interests {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin: 20px,0;
     }
 
     .interest-box {
-        width: 100%;
-        max-width: 300px;
+        flex: 0 1 auto;
+        width: auto;
+        max-width: 150px;
+    }
+    .interest-box img {
+        width: 100px;
+        height: 100px;
     }
 
     .shoutbox-container,
