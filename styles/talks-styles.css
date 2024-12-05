@@ -1,3 +1,7 @@
+.stats-container {
+    display: none;
+}
+
 body {
     background: #000066;
     font-family: "Times New Roman", serif;
@@ -32,6 +36,13 @@ body {
     gap: 15px;
     flex: 1;
 }
+
+.stats-container div {
+        width: 100%;
+        text-align: center;
+        color: #ffff00;
+}
+
 
 .sidebar-link {
     display: block;
@@ -158,3 +169,103 @@ h2 {
     flex-shrink: 0;
 }
 
+@media screen and (max-width: 1024px) {
+    .stats-container {
+        display: contents;
+    }
+    .main-container {
+        grid-template-columns: 1fr;
+        height: auto;
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    .sidebar {
+        border-right: none;
+        border-bottom: 1px solid #ffffff;
+        padding: 15px;
+    }
+
+    .nav-content {
+        gap: 10px;
+    }
+
+    .talks-container {
+        height: auto;
+        padding: 15px;
+    }
+
+    .banner {
+        font-size: 0.9em;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .talks-scroll {
+        height: auto;
+        overflow-y: visible;
+        padding-right: 0;
+    }
+
+    .talk-item, .paper-item {
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    .talk-link, .paper-link {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        margin: 10px 0;
+        background: rgba(0, 0, 51, 0.5);
+        border: 1px solid #ffff00;
+    }
+
+    h2 {
+        font-size: 1.2em;
+        margin: 15px 0;
+    }
+
+    h3 {
+        font-size: 1.1em;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 10px;
+        margin-top: 15px;
+        border-top: 1px solid #ffffff;
+    }
+
+    .visitor-counter {
+        text-align: center;
+        padding: 8px;
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .talks-container {
+        padding: 10px;
+    }
+
+    .talk-item, .paper-item {
+        padding: 10px;
+    }
+
+    h2 { font-size: 1.1em; }
+    h3 { font-size: 1em; }
+
+    .banner {
+        font-size: 0.8em;
+    }
+
+    .sidebar-link {
+        font-size: 0.9em;
+        padding: 6px;
+    }
+}

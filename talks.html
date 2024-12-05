@@ -14,7 +14,6 @@
             <a href="https://www.linkedin.com/in/lucas-jeanniot/" class="sidebar-link" target="_blank">LinkedIn</a>
             <a href="mailto:luc.jeanniot@gmail.com" class="sidebar-link">Email</a>
         </div>
-        <div class="visitor-counter">[VISITORS]: 000012</div>
     </div>
 
     <div class="content talks-container">
@@ -68,8 +67,33 @@
 
         <div class="footer">
             <marquee scrolldelay="100">-=- Sharing knowledge since 2024 -=-</marquee>
+            <div class="stats-container">
+                <div id="stats">
+                    <script>
+                        var t = setInterval(function() {
+                            if (window.goatcounter && window.goatcounter.visit_count) {
+                                clearInterval(t)
+                                window.goatcounter.visit_count({
+                                    append: '#stats',
+                                    style: `
+                                        div {
+                                            border: 1px solid #ffff00;
+                                            background: #000066;
+                                            width: 100%;
+                                            padding: 5px;
+                                            color: #00ff00;
+                                            font-family: "Times New Roman", serif;
+                                        }
+                                        #gcvc-by {display: none;}
+                                    `
+                                })
+                            }
+                        }, 100)
+                    </script>
+                    <script data-goatcounter="https://thressian.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+                </div>
+         </div>
         </div>
     </div>
-</div>
 </body>
 </html>

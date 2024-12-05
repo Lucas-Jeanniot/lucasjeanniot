@@ -1,3 +1,7 @@
+.stats-container {
+    display: none;
+}
+
 body {
     background: #000066;
     font-family: "Times New Roman", serif;
@@ -47,6 +51,12 @@ body {
     display: flex;
     flex-direction: column;
     height: calc(100vh - 80px);
+}
+
+.stats-container div {
+    width: 100%;
+    text-align: center;
+    color: #ffff00;
 }
 
 
@@ -195,4 +205,124 @@ body {
     padding: 10px;
     text-align: center;
     color: #ffff00;
+}
+
+@media screen and (max-width: 1024px) {
+    .main-container {
+        grid-template-columns: 1fr;
+        height: auto;
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    .stats-container{
+        display: contents;
+        text-align: center;
+        background: #c505a9;
+        font-size: 0.9em;
+    }
+
+    .sidebar {
+        border-right: none;
+        border-bottom: 1px solid #ffffff;
+        padding: 15px;
+    }
+
+    .nav-content {
+        gap: 10px;
+    }
+
+    .content.cv-container {
+        height: auto;
+        padding: 15px;
+    }
+
+    .banner {
+        font-size: 0.9em;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .cv-sections-scroll {
+        height: auto;
+        overflow-y: visible;
+        padding-right: 0;
+    }
+
+    .core-competencies {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .competency-item {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    .experience-item {
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    .experience-item ul {
+        padding-left: 10px;
+    }
+
+    .talk-item {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    .cert-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .cert-box {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .education-item {
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    .cv-section {
+        margin: 15px 0;
+        padding: 15px;
+    }
+
+    .summary-content {
+        padding: 15px;
+        font-size: 0.95em;
+    }
+}
+
+/* Additional adjustments for very small screens */
+@media screen and (max-width: 480px) {
+    .core-competencies {
+        grid-template-columns: 1fr;  /* Stack on very small screens */
+    }
+
+    .cert-grid {
+        grid-template-columns: 1fr;  /* Stack certificates */
+    }
+
+    h1 { font-size: 1.4em; }
+    h2 { font-size: 1.2em; }
+    h3 { font-size: 1.1em; }
+
+    .banner {
+        font-size: 0.8em;
+    }
+
+    body {
+        padding: 10px;
+    }
+
+    .sidebar-link {
+        font-size: 0.9em;
+        padding: 6px;
+    }
 }
