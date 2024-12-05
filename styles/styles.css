@@ -398,6 +398,7 @@ h2 {
         background: #ff002f;
         color: #ffffff;
         border: 1px solid #ffffff;
+        z-index: 10;
         width: 30px;
         height: 30px;
         font-size: 1.2em;
