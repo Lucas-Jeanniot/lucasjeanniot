@@ -2,7 +2,8 @@
 /* Important Content */
 
 .mobile-shoutbox-modal,
-.mobile-hatemail-btn {
+.mobile-hatemail-btn
+.desktop-gif {
     display: none;
 }
 
@@ -326,6 +327,14 @@ h2 {
     .stats-container,
     .footer-image-netscape {
         display: none;
+    }
+
+    .desktop-gif {
+        display: contents;
+        display: block;
+        margin: 0 auto;
+        width: 300px;
+        height: auto;
     }
 
     .main-container {
