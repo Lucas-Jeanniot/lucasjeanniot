@@ -314,6 +314,14 @@ h2 {
 /* Mobile Optimisation */
 
 @media screen and (max-width: 1024px) {
+    .side-banner,
+    .nav-badges,
+    .footer-images,
+    .shoutbox-container
+    .footer-image-netscape {
+        display: none;
+    }
+
     .main-container {
         width: 95%;
         grid-template-columns: 1fr;
@@ -322,8 +330,56 @@ h2 {
         min-height: 0;
     }
 
-    .side-banner {
+    .mobile-hatemail-btn {
+        display: block;
+        width: 200px;
+        margin: 20px auto;
+        padding: 10px;
+        background: #ff002f;
+        color: #ffffff;
+        border: 2px solid #ffffff;
+        font-family: "Times New Roman", serif;
+        font-size: 1.2em;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .mobile-shoutbox-modal {
         display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+    }
+    .mobile-shoutbox-modal.active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobile-shoutbox-content {
+        position: relative;
+        width: 90%;
+        height: 80%;
+        background: #000033;
+        border: 2px solid #ffffff;
+        padding: 20px;
+    }
+
+    .mobile-shoutbox-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #ff002f;
+        color: #ffffff;
+        border: 1px solid #ffffff;
+        width: 30px;
+        height: 30px;
+        font-size: 1.2em;
+        cursor: pointer;
     }
 
     .sidebar {
@@ -332,17 +388,14 @@ h2 {
         padding: 15px;
     }
 
-    .nav-badges {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+    .nav-links-section {
         gap: 10px;
-        margin: 10px 0;
+        padding-bottom: 10px;
     }
 
-    .nav-badges img {
-        width: calc(50% - 10px);
-        height: 100px;
+    .audio-control {
+        margin: 10px 0;
+        padding: 8px 0;
     }
 
     .profile-header {
@@ -366,8 +419,7 @@ h2 {
     }
 
     .shoutbox-container,
-    .stats-container,
-    .footer-image-netscape {
+    .stats-container {
         position: static;
         width: 95%;
         margin: 10px auto;
@@ -380,28 +432,18 @@ h2 {
         height: 300px;
     }
 
-    .footer-images {
-        width: 95%;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .footer-image-left,
-    .footer-image-center,
-    .footer-image-right {
+    /* Footer adjustments */
+    .footer {
+        position: static;
         width: 100%;
-        height: auto;
+        margin-top: 20px;
+        padding: 10px 0;
     }
 }
 
 @media screen and (max-width: 480px) {
     body {
         padding: 10px;
-    }
-
-    .nav-badges img {
-        width: 100%;
     }
 
     .profile-header img {

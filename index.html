@@ -29,6 +29,7 @@
                             <a href="talks.html" class="sidebar-link">Conference Talks</a>
                             <a href="https://www.linkedin.com/in/lucas-jeanniot/" class="sidebar-link" target="_blank">LinkedIn</a>
                             <a href="mailto:luc.jeanniot@gmail.com" class="sidebar-link">Email</a>
+                            <button class="mobile-hatemail-btn">HATEMAIL</button>
                         </div>
                         <div class="audio-control">
                             <label for="volume">BGM Volume:</label>
@@ -144,6 +145,15 @@
             <img src="assets/internetexplorer.gif" alt="Internet Explorer" class="footer-image-right">
         </div>
     </div>
+    <div class="mobile-shoutbox-modal">
+        <div class="mobile-shoutbox-content">
+            <button class="mobile-shoutbox-close">X</button>
+            <div class="shoutbox">
+                <!-- Your shoutbox iframe here -->
+                <iframe src="your-shoutbox-url"></iframe>
+            </div>
+        </div>
+    </div>
 <script>
     class Sparkle {
         constructor(x, y) {
@@ -218,6 +228,27 @@
         
         volumeSlider.addEventListener('input', function(e) {
             audio.volume = e.target.value;
+        });
+     </script>
+     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.querySelector('.mobile-shoutbox-modal');
+            const btn = document.querySelector('.mobile-hatemail-btn');
+            const closeBtn = document.querySelector('.mobile-shoutbox-close');
+
+            btn.addEventListener('click', function() {
+                modal.classList.add('active');
+            });
+
+            closeBtn.addEventListener('click', function() {
+                modal.classList.remove('active');
+            });
+
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                }
+            });
         });
      </script>
 </body>
