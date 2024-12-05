@@ -232,6 +232,7 @@ h2 {
 }
 
 /* Shoutbox, View Counter, Left Side Stuff */
+
 .shoutbox-container {
     position: absolute;
     left: calc(100% + 20px);
@@ -307,4 +308,113 @@ h2 {
 
 .footer-image-center {
     height: 70px;
+}
+
+
+/* Mobile Optimisation */
+
+@media screen and (max-width: 1024px) {
+    .main-container {
+        width: 95%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        height: auto;
+        min-height: 0;
+    }
+
+    .side-banner {
+        display: none;
+    }
+
+    .sidebar {
+        border-right: none;
+        border-bottom: 1px solid #ffffff;
+        padding: 15px;
+    }
+
+    .nav-badges {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .nav-badges img {
+        width: calc(50% - 10px);
+        height: 100px;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .profile-header img.header-name {
+        width: 100%;
+        height: auto;
+    }
+
+    .interests {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .interest-box {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .shoutbox-container,
+    .stats-container,
+    .footer-image-netscape {
+        position: static;
+        width: 95%;
+        margin: 10px auto;
+        left: auto;
+    }
+
+    .shoutbox iframe {
+        position: relative;
+        width: 100%;
+        height: 300px;
+    }
+
+    .footer-images {
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer-image-left,
+    .footer-image-center,
+    .footer-image-right {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .nav-badges img {
+        width: 100%;
+    }
+
+    .profile-header img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .interest-box img {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 { font-size: 1.2em; }
+    h2 { font-size: 1em; }
+    .sidebar-link { font-size: 0.9em; }
 }
