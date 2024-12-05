@@ -383,7 +383,7 @@ h2 {
     .mobile-shoutbox-content {
         position: relative;
         width: 90%;
-        height: 80%;
+        height: 90%;
         background: #000033;
         border: 2px solid #ffffff;
         padding: 20px;
@@ -407,8 +407,9 @@ h2 {
         border: none;
     }
     .mobile-shoutbox-content .shoutbox {
-        height: calc(100% - 40px);
-        margin-top: 40px;
+       flex: 1;
+       display: flex;
+       align-items: stretch;
     }
 
     .sidebar {
