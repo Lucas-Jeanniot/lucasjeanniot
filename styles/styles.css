@@ -383,10 +383,12 @@ h2 {
     .mobile-shoutbox-content {
         position: relative;
         width: 90%;
-        height: 90%;
+        height: 80%;
         background: #000033;
         border: 2px solid #ffffff;
-        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
     }
 
     .mobile-shoutbox-close {
