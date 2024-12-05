@@ -381,6 +381,15 @@ h2 {
         font-size: 1.2em;
         cursor: pointer;
     }
+    .mobile-shoutbox-content .shoutbox iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+    .mobile-shoutbox-content .shoutbox {
+        height: calc(100% - 40px); /* Account for close button space */
+        margin-top: 40px;
+    }
 
     .sidebar {
         border-right: none;
