@@ -18,11 +18,38 @@ body {
     border: 2px solid #ffffff;
 }
 
+.sidebar {
+    padding: 12px;
+    border-right: 1px solid #ffffff;
+}
+
+.nav-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar-link {
+    display: block;
+    color: #ffff00;
+    text-decoration: underline;
+    padding: 8px;
+    text-align: center;
+    font-size: 1em;
+}
+
+.sidebar-link:hover {
+    color: #ff0000;
+    background: #000099;
+}
+
 .content.cv-container {
     display: flex;
     flex-direction: column;
     height: calc(100vh - 80px);
 }
+
+
 
 .cv-section {
     border: 1px solid #ffffff;
