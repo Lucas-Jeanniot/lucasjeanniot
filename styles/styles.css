@@ -322,8 +322,8 @@ h2 {
     .side-banner,
     .nav-badges,
     .footer-images,
-    .shoutbox-container
-    .shoutbox
+    .shoutbox-container,
+    .stats-container,
     .footer-image-netscape {
         display: none;
     }
