@@ -1,0 +1,116 @@
+/* Shared base styles across all pages */
+
+html, body {
+    min-height: 100vh;
+    background: url('../assets/background.gif');
+    background-repeat: repeat;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Times New Roman", serif;
+    color: #ffffff;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Typography */
+h1 {
+    font-size: 1.5em;
+    margin: 0;
+    color: #ffff00;
+}
+
+h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #ff002f;
+}
+
+/* Navigation */
+.sidebar {
+    padding: 12px;
+    border-right: 1px solid #ffffff;
+    background: rgba(0, 0, 51, 0.85);
+}
+
+.nav-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nav-content h2 {
+    text-align: center;
+}
+
+.nav-header {
+    text-align: center;
+}
+
+.sidebar-link {
+    display: block;
+    color: #ffff00;
+    text-decoration: underline;
+    padding: 8px;
+    text-align: center;
+    font-size: 1em;
+}
+
+.sidebar-link:hover {
+    color: #ff0000;
+    background: #000099;
+}
+
+/* Desktop GIF - hidden by default */
+.desktop-gif {
+    display: none;
+}
+
+/* Stats container */
+.stats-container {
+    display: none;
+}
+
+.stats-container div {
+    width: 100%;
+    text-align: center;
+    color: #ffff00;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    font-size: 0.8em;
+    color: #cccccc;
+}
+
+/* Mobile responsive - shown on smaller screens */
+@media screen and (max-width: 1024px) {
+    .desktop-gif {
+        display: block;
+        margin: 0 auto;
+        width: 300px;
+        height: auto;
+    }
+
+    .sidebar {
+        border-right: none;
+        border-bottom: 1px solid #ffffff;
+        padding: 15px;
+    }
+
+    .nav-content {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 { font-size: 1.2em; }
+    h2 { font-size: 1em; }
+    .sidebar-link { font-size: 0.9em; }
+}

@@ -1,26 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV - Lucas Jeanniot</title>
+<link rel="stylesheet" href="../styles/shared.css">
 <link rel="stylesheet" href="cv-styles.css">
 </head>
 <body>
 <div class="main-container">
-    <div class="sidebar">
+    <nav class="sidebar" aria-label="Main navigation">
         <div class="desktop-gif">
-            <img src="../assets/Desktop.gif" alt="banner">
+            <img src="../assets/Desktop.gif" alt="Retro desktop computer animation">
         </div>
         <div class="nav-content">
-            <h2 style="text-align: center;">Navigation</h2>
+            <h2 class="nav-header">Navigation</h2>
             <a href="/" class="sidebar-link">Home</a>
             <a href="/cv/" class="sidebar-link">CV</a>
             <a href="/talks/" class="sidebar-link">Conference Talks</a>
-            <a href="https://www.linkedin.com/in/lucas-jeanniot/" class="sidebar-link" target="_blank">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/lucas-jeanniot/" class="sidebar-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a href="mailto:luc.jeanniot@gmail.com" class="sidebar-link">Email</a>
             <button class="plaintext-btn sidebar-link">View Plain Text</button>
         </div>
-    </div>
+    </nav>
 
-    <div class="content cv-container">
+    <main class="content cv-container">
         <div class="banner">
             <marquee scrolldelay="80">-=[ DIGITAL RESUME - LAST UPDATED 29/11/2024 ]=-</marquee>
         </div>
@@ -122,51 +126,16 @@
                 </div>
             </div>
         </div>
-        <div class="footer">
+        <footer class="footer">
             <marquee scrolldelay="100">-=- Have a cool automation idea? Feel free to reach out via email -=-</marquee>
             <div class="stats-container">
-                <div id="stats">
-                    <script>
-                        var t = setInterval(function() {
-                            if (window.goatcounter && window.goatcounter.visit_count) {
-                                clearInterval(t)
-                                window.goatcounter.visit_count({
-                                    append: '#stats',
-                                    style: `
-                                        div {
-                                            border: 1px solid #ffff00;
-                                            background: #000066;
-                                            width: 100%;
-                                            padding: 5px;
-                                            color: #00ff00;
-                                            font-family: "Times New Roman", serif;
-                                        }
-                                        #gcvc-by {display: none;}
-                                    `
-                                })
-                            }
-                        }, 100)
-                    </script>
-                    <script data-goatcounter="https://thressian.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-                </div>
-        </div>
-    </div>
+                <div id="stats"></div>
+            </div>
+        </footer>
+    </main>
 </div>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-    const toggleBtn = document.querySelector('.plaintext-btn');
-    
-    toggleBtn.addEventListener('click', function() {
-        document.body.classList.toggle('plaintext-mode');
-        
-        // Update button text
-        if (document.body.classList.contains('plaintext-mode')) {
-            toggleBtn.textContent = 'View Styled CV';
-        } else {
-            toggleBtn.textContent = 'View Plain Text';
-        }
-    });
-});
-</script>
+<script src="../scripts/cv.js"></script>
+<script src="../scripts/goatcounter.js"></script>
+<script data-goatcounter="https://thressian.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

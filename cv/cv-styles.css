@@ -1,19 +1,7 @@
 /* Base Styles */
-html, body {
-    min-height: 100vh;
-    background: url('../assets/background.gif');
-    background-repeat: repeat;
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    font-family: "Times New Roman", serif;
-    color: #ffffff;
-    margin: 0;
     padding: 20px;
     height: 100vh;
-    box-sizing: border-box;
 }
 
 /* Layout */
@@ -32,27 +20,6 @@ body {
 /* Navigation Styles */
 .sidebar {
     padding: 12px;
-    border-right: 1px solid #ffffff;
-}
-
-.nav-content {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.sidebar-link {
-    display: block;
-    color: #ffff00;
-    text-decoration: underline;
-    padding: 8px;
-    text-align: center;
-    font-size: 1em;
-}
-
-.sidebar-link:hover {
-    color: #ff0000;
-    background: #000099;
 }
 
 .plaintext-btn {
@@ -246,19 +213,6 @@ body {
     padding: 10px;
     text-align: center;
     color: #ffff00;
-}
-
-/* Typography */
-h1 { 
-    font-size: 1.5em; 
-    margin: 0;
-    color: #ffff00; 
-}
-
-h2 { 
-    font-size: 1.2em; 
-    margin: 10px 0;
-    color: #ff002f;
 }
 
 /* Hidden Elements */
