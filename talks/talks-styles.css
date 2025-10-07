@@ -10,10 +10,10 @@ body {
 
 .main-container {
     display: grid;
-    grid-template-columns: 150px 1fr;
+    grid-template-columns: 200px 1fr;
     height: calc(100vh - 40px);
     background: rgba(0, 0, 51, 0.85);
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     background: #000033;
     border: 2px solid #ffffff;
@@ -26,6 +26,40 @@ body {
 
 .nav-content {
     flex: 1;
+}
+
+.nav-links-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 5px;
+}
+
+.nav-separator {
+    border: none;
+    border-top: 1px dotted #ffff00;
+    margin: 5px 0;
+}
+
+.nav-button {
+    background: linear-gradient(180deg, #000099 0%, #000066 100%);
+    border: 2px outset #6666ff;
+    padding: 8px 12px !important;
+    margin: 2px 0;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
+}
+
+.nav-button:hover {
+    background: linear-gradient(180deg, #0000cc 0%, #000099 100%);
+    border: 2px inset #6666ff;
+    transform: translateY(1px);
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
+}
+
+.nav-button:active {
+    border: 2px inset #3333ff;
 }
 
 .content {
@@ -76,44 +110,182 @@ body {
     border-radius: 4px;
 }
 
-.talks-section, .papers-section {
-    border: 1px solid #ffffff;
-    margin: 20px 0;
+/* Page Banner */
+.page-banner {
+    background: linear-gradient(180deg, #000066 0%, #000033 100%);
+    border: 3px ridge #ffffff;
     padding: 20px;
-    background: #000044;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.talk-item, .paper-item {
-    border: 1px solid #ffffff;
-    margin: 15px 0;
-    padding: 15px;
-    background: #000066;
+.page-title {
+    color: #00ffff;
+    font-size: 1.8em;
+    margin: 0 0 10px 0;
+    text-shadow: 2px 2px 0px #ff00ff;
+    font-family: Arial, sans-serif;
 }
 
-.talk-item h3, .paper-item h3 {
+.page-subtitle {
     color: #ffff00;
-    margin-bottom: 5px;
-}
-
-.talk-title, .paper-title {
-    color: #ffffff;
-    margin: 10px 0;
+    margin: 0;
+    font-size: 1em;
     font-style: italic;
 }
 
-.talk-link, .paper-link {
-    color: #00ff00;
-    text-decoration: none;
-    border: 1px solid #00ff00;
-    padding: 5px 10px;
-    display: inline-block;
-    margin-top: 10px;
+/* Section Dividers */
+.section-divider {
+    text-align: center;
+    margin: 30px 0;
+    color: #ffff00;
+    font-size: 1.2em;
 }
 
-.talk-link:hover, .paper-link:hover {
+/* Sections */
+.talks-section, .papers-section {
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+.section-title {
+    color: #00ffff;
+    font-size: 1.4em;
+    margin: 0 0 20px 0;
+    padding: 10px;
+    background: linear-gradient(90deg, #000066 0%, transparent 100%);
+    border-left: 4px solid #00ffff;
+}
+
+/* Talk Cards */
+.talk-card {
+    background: linear-gradient(135deg, #000066 0%, #000044 100%);
+    border: 2px solid #6666ff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.talk-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(102, 102, 255, 0.3);
+}
+
+.talk-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.conference-name {
     color: #ffff00;
-    border-color: #ffff00;
-    background: rgba(255, 255, 0, 0.1);
+    font-size: 1.2em;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.talk-meta {
+    color: #00ffff;
+    font-size: 0.85em;
+    font-family: Arial, sans-serif;
+}
+
+.talk-title {
+    color: #ffffff;
+    margin: 0 0 15px 0;
+    font-size: 1.05em;
+    line-height: 1.5;
+}
+
+.watch-btn {
+    display: inline-block;
+    background: linear-gradient(180deg, #00aa00 0%, #006600 100%);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px outset #00ff00;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.watch-btn:hover {
+    background: linear-gradient(180deg, #00cc00 0%, #008800 100%);
+    border: 2px inset #00ff00;
+    transform: translateY(1px);
+}
+
+.no-video {
+    color: #999999;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+/* Paper Cards */
+.paper-card {
+    background: linear-gradient(135deg, #330066 0%, #220044 100%);
+    border: 2px solid #9966ff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.paper-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(153, 102, 255, 0.3);
+}
+
+.paper-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.publication-source {
+    color: #ff66ff;
+    font-size: 1.1em;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.paper-meta {
+    color: #ffcc00;
+    font-size: 0.85em;
+}
+
+.paper-title {
+    color: #ffffff;
+    margin: 0 0 15px 0;
+    font-size: 1.05em;
+    line-height: 1.5;
+}
+
+.read-btn {
+    display: inline-block;
+    background: linear-gradient(180deg, #9966ff 0%, #6633cc 100%);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px outset #cc99ff;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.read-btn:hover {
+    background: linear-gradient(180deg, #aa77ff 0%, #7744dd 100%);
+    border: 2px inset #cc99ff;
+    transform: translateY(1px);
 }
 
 .banner, .footer {
@@ -166,18 +338,25 @@ body {
         padding-right: 0;
     }
 
-    .talk-item, .paper-item {
+    .talk-card, .paper-card {
         padding: 15px;
         margin: 10px 0;
     }
 
-    .talk-link, .paper-link {
+    .talk-header, .paper-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .page-title {
+        font-size: 1.4em;
+    }
+
+    .watch-btn, .read-btn {
         display: block;
         text-align: center;
-        padding: 10px;
-        margin: 10px 0;
-        background: rgba(0, 0, 51, 0.5);
-        border: 1px solid #ffff00;
+        width: 100%;
     }
 
     h2 {
