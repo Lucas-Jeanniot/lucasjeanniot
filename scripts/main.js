@@ -180,10 +180,50 @@ function initMarqueePause() {
     });
 }
 
+// Konami Code Easter Egg - Secret Ellen Shrine
+function initKonamiCode() {
+    const konamiCode = [
+        'ArrowUp', 'ArrowUp',
+        'ArrowDown', 'ArrowDown',
+        'ArrowLeft', 'ArrowRight',
+        'ArrowLeft', 'ArrowRight',
+        'KeyB', 'KeyA'
+    ];
+    let konamiIndex = 0;
+
+    document.addEventListener('keydown', function(e) {
+        // Check if the pressed key matches the next key in the sequence
+        if (e.code === konamiCode[konamiIndex]) {
+            konamiIndex++;
+
+            // If the entire code has been entered
+            if (konamiIndex === konamiCode.length) {
+                // Set session storage token to prove they used the code
+                sessionStorage.setItem('konami_unlocked', 'true');
+
+                // Create a magical reveal effect
+                const body = document.body;
+                body.style.transition = 'opacity 0.5s ease';
+                body.style.opacity = '0';
+
+                setTimeout(function() {
+                    window.location.href = '/ellen/';
+                }, 500);
+
+                konamiIndex = 0; // Reset
+            }
+        } else {
+            // Reset if wrong key is pressed
+            konamiIndex = 0;
+        }
+    });
+}
+
 // Initialize everything when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
     initAudioControl();
     initSparkleEffect();
     initMobileShoutbox();
     initMarqueePause();
+    initKonamiCode();
 });
